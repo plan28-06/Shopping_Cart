@@ -1,0 +1,28 @@
+.home {
+    text-align: center;
+    padding: 2rem;
+}
+
+.home > h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.home > p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.home > button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    transition: #007bff 0.3s ease;
+}
+.home > button:hover {
+    background-color:#0064ce;
+    cursor: pointer;
+}
