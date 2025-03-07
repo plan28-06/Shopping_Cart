@@ -62,3 +62,12 @@ li:hover{
     background-color: #cce5ff;
     border-radius: 8px;
 }
+
+.links_list li a {
+    text-decoration: none;
+    color: inherit;         
+}
+
+.links_list li a:hover {
+    color: #007bff; 
+}
