@@ -1,23 +1,81 @@
 .grid-container {
     display: grid;
-    overflow: clip;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-auto-rows:auto; 
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 40px;
     justify-content: center;
     background-color: rgb(245, 245, 245);
-    justify-content: center;
     padding: 30px;
 }
 
 img {
     height: 200px;
     width: 200px;
-    object-fit: cover; 
 }
 
-#grid-item{
+.grid-item {
     background-color: white;
-    align-self: center;
-    justify-self: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.itemimage img {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    display: block;
+}
+
+input {
+    width: 40px;
+    border-radius: 8px;
+    padding: 2px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.itembuttons > button {
+    width: 40px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.itembuttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+.addtocart {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.atc {
+    width: 100px;
+    text-align: center;
+    background-color: #025cbb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.atc:hover {
+    cursor: pointer;
+    background-color: #023d7d;
+}
+
+.itembuttons > button:hover {
+    cursor: pointer;
+    background-color: #023d7d;
 }
