@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./Shop.module.css";
+import { CartContext } from "./CartContext";
 
 const Shop = () => {
     const [items, setItems] = useState([]);
     const [quantities, setquantities] = useState({});
-    const [selected, setselected] = useState({});
+    const {selected, setselected} = useContext(CartContext);
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
-            .then((response) => response.json())
+            .then((response) => response.json())        
             .then((data) => {
                 const initialQuantities = {};
                 data.forEach((item) => {
@@ -34,10 +35,10 @@ const Shop = () => {
         }));
     };
 
-    const addselected = (id, quantity) => {
+    const addselected = (id, quantity,title,price) => {
         setselected((prev) => ({
             ...prev,
-            [id]: { id, quantity },
+            [id]: { id, quantity,title,price},
         }));
     };
 
@@ -72,7 +73,9 @@ const Shop = () => {
                             onClick={() =>
                                 addselected(
                                     item.id,
-                                    quantities[item.id].quantity 
+                                    quantities[item.id].quantity,
+                                    item.title,
+                                    item.price,
                                 )
                             }>
                             Add To Cart

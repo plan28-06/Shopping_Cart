@@ -10,10 +10,16 @@ const Navbar = () => {
             </div>
             <div className={styles.links}>
                 <ul className={styles.links_list}>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/shop">Shop</Link></li>
                     <li>
-                        <button>Cart</button>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/shop">Shop</Link>
+                    </li>
+                    <li>
+                        <button>
+                            <Link to="/cart">Cart</Link>
+                        </button>
                     </li>
                 </ul>
             </div>
