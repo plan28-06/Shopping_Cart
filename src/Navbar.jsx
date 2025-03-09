@@ -17,7 +17,7 @@ const Navbar = () => {
                         <Link to="/shop">Shop</Link>
                     </li>
                     <li>
-                        <button>
+                        <button className={styles.cartbutton}>
                             <Link to="/cart">Cart</Link>
                         </button>
                     </li>

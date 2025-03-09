@@ -71,3 +71,38 @@ li:hover{
 .links_list li a:hover {
     color: #007bff; 
 }
+
+@media(max-width:768px) {
+    .navbar{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:585px){
+    .heading{
+        width: 100% !important;
+    }
+
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading{
+        justify-content: center;
+        margin-left: 0px;
+    }
+}
+
+@media(max-width:450px){
+    .heading>a{
+        font-size: 32px !important;
+    }
+    .links_list{
+        font-size: 24px;
+    }
+    .cartbutton{
+        font-size: 24px;
+    }
+}

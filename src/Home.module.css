@@ -1,6 +1,10 @@
 .home {
     text-align: center;
     padding: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
 }
 
 .home > h1 {
@@ -25,4 +29,11 @@
 .home  button:hover {
     background-color:#0064ce;
     cursor: pointer;
+}
+
+
+@media(max-width:768px) {
+    .links{
+        flex-wrap: wrap;
+    }
 }
